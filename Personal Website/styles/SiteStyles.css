@@ -1,0 +1,497 @@
+@charset "utf-8";
+ 
+*{
+  box-sizing: border-box;
+}
+ 
+ body{
+     padding: 0px;
+     margin: 0px;
+ }
+  
+ /* Add a black background color to the top navigation */
+
+ .topnav {
+    background-color: #333;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: #333;
+    width: 100%;
+    position: fixed;
+  }
+  
+  /* Style the links inside the navigation bar */
+
+  .topnav li{
+    float: left;
+  }
+
+  .topnav li a {
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  /* Change the color of links on hover */
+  .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  /* Add an active class to highlight the current page */
+  .topnav a.active {
+    background-color:  rgb(214, 214, 212);
+    color: black;
+  }
+  
+  /* Hide the link that should open and close the topnav on small screens */
+  .topnav .icon {
+    display: none;
+  } 
+
+  header{
+    height: 500px;
+    border: 1px solid black;
+  }
+
+  header h1{
+    text-align: center;
+    font-size: 60px;
+    position: relative;
+    top: 150px;
+    color: white;
+  }
+
+  header h2{
+    text-align: center;
+    color: white;
+    font-size: 40px;
+    position: relative;
+    top: 150px;
+    color: white;
+  }
+
+
+  /* Footer styles */
+  footer{
+    background-color: grey;
+  }
+
+  div#footerList a{
+    float: left;
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+
+  div#footerList a:hover{
+    color: white;
+  }
+
+   /* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+@media screen and (max-width: 600px) {
+    .topnav a:not(:first-child) {display: none;}
+    .topnav a.icon {
+      float: right;
+      display: block;
+    }
+  }
+  
+  /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+  @media screen and (max-width: 600px) {
+    .topnav.responsive {position: relative;}
+    .topnav.responsive a.icon {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+    .topnav.responsive a {
+      float: none;
+      display: block;
+      text-align: left;
+    }
+  } 
+ /* For mobile phones: */
+ [class*="col-"] {
+  width: 100%;
+}
+
+@media only screen and (min-width: 600px) {
+  /* For tablets: */
+  .col-s-1 {width: 8.33%;}
+  .col-s-2 {width: 16.66%;}
+  .col-s-3 {width: 25%;}
+  .col-s-4 {width: 33.33%;}
+  .col-s-5 {width: 41.66%;}
+  .col-s-6 {width: 50%;}
+  .col-s-7 {width: 58.33%;}
+  .col-s-8 {width: 66.66%;}
+  .col-s-9 {width: 75%;}
+  .col-s-10 {width: 83.33%;}
+  .col-s-11 {width: 91.66%;}
+  .col-s-12 {width: 100%;}
+}
+
+@media only screen and (min-width: 768px) {
+  /* For desktop: */
+  .col-1 {width: 8.33%;}
+  .col-2 {width: 16.66%;}
+  .col-3 {width: 25%;}
+  .col-4 {width: 33.33%;}
+  .col-5 {width: 41.66%;}
+  .col-6 {width: 50%;}
+  .col-7 {width: 58.33%;}
+  .col-8 {width: 66.66%;}
+  .col-9 {width: 75%;}
+  .col-10 {width: 83.33%;}
+  .col-11 {width: 91.66%;}
+  .col-12 {width: 100%;}
+} 
+
+[class*="col-"] {
+  float: left;
+  padding: 15px;
+}
+
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+
+
+
+  /* Specific Styles */
+
+  /* Home Styles */
+
+  header#homeHeader{
+    background-image: url("../images/Matrixback.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+  }
+
+  div#pictureBox{
+    margin: 30px auto;
+  }
+
+  div#pictureBox img{
+    border-radius: 50%;
+    max-width: 350px;
+    height: 300px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border: 3px solid black;
+  }
+
+  p#profileParagraph{
+    width: 60%;
+    margin: 30px auto;
+    font-size: 25px;
+    text-align: justify;
+  }
+
+  article#home a{
+    text-decoration: none;
+  }
+
+  div#aboutBox{
+    background-image: url("../images/mesaArch.jpg");
+    background-size: 100% 100%;
+  }
+
+  div#resumeBox{
+    background-image: url("../images/ResumeBack.jpg");
+    background-size: 100% 100%;
+  }
+
+  div#workBox{
+    background-image: url("../images/SolarSystem.PNG");
+    background-size: 100% 100%;
+  }
+
+  div#contactBox{
+    background-image: url("../images/contactBack.jpg");
+    background-size: 100% 100%;
+  }
+
+  
+
+  div#aboutBox, div#resumeBox, div#workBox, div#contactBox{
+    text-align: center;
+    height: 350px;
+    color: black;
+    border: 1px solid black;
+  }
+
+  div#aboutBox h3, div#resumeBox h3, div#workBox h3, div#contactBox h3{
+    font-size: 40px;
+    color: black;
+    text-shadow: #333;
+    
+  }
+
+  div#aboutBox p, div#resumeBox p, div#workBox p, div#contactBox p{
+    font-size: 20px;
+  }
+
+  div#aboutBox h3, div#aboutBox p{
+    color: white;
+  }
+
+  
+  div#workBox h3, div#workBox p{
+    color: white;
+  }
+
+  div#aboutBox:hover, div#resumeBox:hover, div#workBox:hover, div#contactBox:hover{
+    opacity: .5;
+  }
+
+ 
+
+  /* About styles */
+
+  header#about{
+    background-image: url("../images/mesaArch.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+  }
+
+  header#about h1{
+    color: white;
+    max-width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    top: 80px;
+  }
+
+  p#aboutSummary{
+    max-width: 70%;
+    text-align: justify;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+
+  
+ article#about{
+  padding: 5px;
+  background: rgb(214, 214, 212);
+}
+
+article#about h2{
+  text-align: center;
+  font-size: 50px;
+}
+
+article#about h3{
+  text-align: left;
+  font-size: 30px;
+}
+
+article#about p{
+  text-align: justify;
+  max-width: 100%;
+}
+
+/* Resume styles */ 
+
+header#resumeHeader{
+  background-image: url("../images/ResumeBack.jpg");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
+header#resumeHeader h1{
+  color: black;
+}
+
+
+article#resume{
+  width: 85%;
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px solid black;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  padding: 5px;
+  background: url(../images/paperback.jpg); 
+  box-shadow: 5px 10px 18px #888888;
+}
+
+article#resume div.sectionTitle h2{
+  text-align: center;
+  background-color: rgb(63, 56, 255);
+  font-size: 35px;
+  color: white
+}
+
+article#resume section#header h2{
+  text-align: center;
+  font-size: 70px;
+}
+
+article#resume section#header p{
+  text-align: center;
+  font-size: 20px;
+}
+
+
+
+
+/* Contact Styles */
+
+header#contactHeader{
+  background-image: url("../images/contactBack.jpg");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
+header#contactHeader h1{
+  color:black;
+  text-align: left;
+  font-size: 60px;
+  position: relative;
+  top: 150px;
+  left: 50px;
+}
+
+input[type=text], select, textarea, input[type=phone], input[type=email] {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  resize: vertical;
+}
+
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+
+input[type=submit] {
+  background-color: rgb(139, 138, 156);
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  cursor: pointer;
+  margin-left: 50%;
+}
+
+input[type=submit]:hover {
+  background-color: rgb(177, 177, 196);
+}
+
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+.col-3 {
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+}
+
+.col-9 {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+}
+
+div#contactForm{
+  border: 1px solid black;
+  padding: 10px; 
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 80%
+}
+
+/* Portfolio styles */
+
+header#workHeader{
+  background-image: url("../images/SolarSystem.PNG");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
+article#portfolio section#head h2{
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  font-size: 30px;
+}
+
+div#linkImageBox{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  height: auto;
+}
+
+
+img#gitLog{
+  position: relative;
+  left: 45%;
+}
+
+article#portfolio section#body h2{
+  text-align: center;
+  font-size: 40px;
+  margin-top: 100px;
+}
+
+article#portfolio section#body hr{
+  margin-bottom: 100px;
+}
+
+article#portfolio section#body h3{
+  text-align: center;
+  font-size: 30px;
+}
+
+article#portfolio section#head img{
+  max-width: 50%;
+  margin: auto;
+}
+
+section#body a{
+  text-decoration: none;
+  color: black;
+}
+
+div#linkButton{
+  background-color: teal;
+  border: 1px solid black;
+  max-width: 20%;
+  text-align: center;
+  color: white;
+}
+
+div#linkButton:hover{
+  opacity: .7;
+}
+
+table{
+  margin-bottom: 20px;
+  background-color: lightblue;
+}
+
+table, th, td{
+  border: 1px solid black;
+  text-align: center;
+}
+
